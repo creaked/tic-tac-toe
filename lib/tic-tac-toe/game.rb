@@ -11,26 +11,14 @@ class Game
     # Create players
     @x = Player.new('X')
     @o = Player.new('O')
-    
-    # Display game instructions
-    instructions
-  end
-  
-  # Shows users instructions to play game
-  def instructions
-    puts "Lorum ipsum"
   end
   
   # Play the game
   def play
-    until win?
-      turn(@x.name)
-      $board[@x_move.downcase.to_sym] = Rainbow("X").red
-      @board.draw
-      
-      turn(@o.name)
-      $board[@o_move.downcase.to_sym] = Rainbow("O").green
-      @board.draw
+    @board.draw
+    until win or draw
+      x_turn
+      o_turn
     end
   end
   
@@ -47,12 +35,34 @@ class Game
     end
   end
   
-  # Checks if player made valid move
-  def valid_move
+  def x_turn
+    turn(@x.name)
+    if $board[@x_move.downcase.to_sym] == " "
+      $board[@x_move.downcase.to_sym] = Rainbow("X").red
+      @board.draw
+    else
+      puts "invalid move"
+      x_turn
+    end
+  end
+  
+  def o_turn
+    turn(@o.name)
+    if $board[@o_move.downcase.to_sym] == " "
+      $board[@o_move.downcase.to_sym] = Rainbow("O").green
+      @board.draw
+    else
+      puts "invalid move"
+      o_turn
+    end
   end
   
   # Checks if player has won
-  def win?
+  def win
+    false
+  end
+  
+  def draw
     false
   end
 end
