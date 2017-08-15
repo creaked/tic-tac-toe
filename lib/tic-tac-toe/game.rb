@@ -16,9 +16,20 @@ class Game
   # Play the game
   def play
     @board.draw
-    until win or draw
+    loop do
       x_turn
+      if check_win == true
+        puts "X Wins"
+        break 
+      end
+      break if check_draw == true
+      
       o_turn
+      if check_win == true
+        puts "X Wins"
+        break 
+      end
+      break if check_draw == true
     end
   end
   
@@ -58,11 +69,12 @@ class Game
   end
   
   # Checks if player has won
-  def win
+  def check_win
     false
   end
   
-  def draw
-    false
+  def check_draw
+    false if $board.has_value?(" ")  == true
+    true if $board.has_value?(" ") != true
   end
 end
