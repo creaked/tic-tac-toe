@@ -26,7 +26,7 @@ class Game
       
       o_turn
       if check_win == true
-        puts "X Wins"
+        puts "O Wins"
         break 
       end
       break if check_draw == true
@@ -70,7 +70,15 @@ class Game
   
   # Checks if player has won
   def check_win
-    false
+    values = $board.values
+    true if (values[0] == values[1] && values[1] == values[2] && values[0] != " ") ||
+            (values[3] == values[4] && values[4] == values[5] && values[3] != " ") ||
+            (values[6] == values[7] && values[7] == values[8] && values[6] != " ") ||
+            (values[0] == values[3] && values[3] == values[6] && values[0] != " ") ||
+            (values[1] == values[4] && values[4] == values[7] && values[1] != " ") ||
+            (values[2] == values[5] && values[5] == values[8] && values[2] != " ") ||
+ 	          (values[0] == values[4] && values[4] == values[8] && values[0] != " ") ||
+            (values[2] == values[4] && values[4] == values[6] && values[2] != " ")
   end
   
   def check_draw
