@@ -77,7 +77,7 @@ class Game
             (values[0] == values[3] && values[3] == values[6] && values[0] != " ") ||
             (values[1] == values[4] && values[4] == values[7] && values[1] != " ") ||
             (values[2] == values[5] && values[5] == values[8] && values[2] != " ") ||
- 	          (values[0] == values[4] && values[4] == values[8] && values[0] != " ") ||
+            (values[0] == values[4] && values[4] == values[8] && values[0] != " ") ||
             (values[2] == values[4] && values[4] == values[6] && values[2] != " ")
   end
   
