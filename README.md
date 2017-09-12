@@ -1,4 +1,5 @@
 # tic-tac-toe
+[![Build Status](https://travis-ci.org/creaked/tic-tac-toe.svg?branch=master)](https://travis-ci.org/creaked/tic-tac-toe)
 
 ![Alt text](https://image.ibb.co/jvRwEv/Screen_Shot_2017_08_17_at_9_25_41_AM.png "Game Screen Shot")
 
