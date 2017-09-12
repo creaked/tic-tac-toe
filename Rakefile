@@ -1,3 +1,5 @@
+task :default => :spec
+
 # RSpec
 begin
   require 'rspec/core/rake_task'
