@@ -14,7 +14,7 @@ To win a player must get 3 in a row vertically, horizontally, or diagonally. If
 at the end of the game there is no winner the game will result in a draw.
 
 ### TODO:
-1. Add tests
+1. ~~Add tests~~
 2. Add simple AI
 3. Refactor
 
