@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
-#RSpec
+# RSpec
 gem 'rspec'
 
-#RDoc
+# match_hash
+gem 'match_hash'
+
+# RDoc
 gem 'rdoc'
 
-#Rainbow
+# Rainbow
 gem 'rainbow'
